@@ -289,3 +289,125 @@
 
 // console.log(func(1, 10)); 
 // console.log(func(2, 5));
+
+
+
+// let func = (str) => {
+//     return str.sort()[0].split('').map((el)=>{
+//         return `${el}***`
+//     }).join('').split('').reverse().join('').replace('***','').split('').reverse().join('')
+// }
+
+// console.log(func(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]));
+
+
+
+// let func = (str) => {
+    // return str.split(' ').sort((a, b) => a.match(/\d/) - b.match(/\d/)).join(' '); 
+// };
+
+// console.log(func("4of Fo1r pe6ople g3ood th5e the2"));
+
+
+
+// let func = (n,s) => {
+//     let r = ''
+//     for(let i = 0;i<n;i++){
+//         r+=s
+//     }
+//     return r
+// }
+
+// console.log(func(6, 'Hi'));
+
+
+
+
+
+
+// let func = (str) => {
+//     let filtered = str.replace(/[^a-zA-Z]/g, '');
+//     return filtered.split('').reverse().join('');
+// };
+
+// console.log(func('ultr53o?n')); 
+
+
+
+
+
+// let func = (str) => {
+//     let result = [];
+//     for (let i = 0; i < str.length; i++) {
+//         let modifiedStr = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1);
+//         result.push(modifiedStr);
+//     }
+//     return result.filter((el)=>el !== str)
+// }
+
+// console.log(func('hello world'));
+
+
+
+// let func = (arr) => {
+//     return arr.map((el) => el.sort((a, b) => a - b)[0]).reduce((acc,el)=>{
+//         return acc + el
+//     },0)
+// };
+
+// console.log(func([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]));
+
+
+
+
+// let func = (str) => {
+//     let str1 = str.split('').map((el,idx)=>{
+//         if(idx % 2 === 0){
+//             return el.toUpperCase()
+//         }
+//         return el.toLowerCase()
+//     }).join('')
+
+//     let str2 = str.split('').map((el,idx)=>{
+//         if(idx % 2 === 1){
+//             return el.toUpperCase()
+//         }
+//         return el.toLowerCase()
+//     }).join('')
+
+//     return [str1,str2]
+// }
+
+// console.log(func('codewars'));
+
+
+
+// let func = (s) =>{
+//     let a = 'aeiouAEIOU'
+//     let r = ''
+//     for(let i = 0;i < s.length;i++){
+//       if(a.includes(s[i])){
+//         r+='!'
+//       }else{
+//         r+=s[i]
+//       }
+      
+//     }
+//     return r
+// }
+
+// console.log(func('asaa'));
+
+
+
+let func = (arr) =>{
+    let sort = arr.sort((a,b)=>a-b) 
+    if(sort[0] === sort[1]){
+        return sort.slice(-1)[0]
+    }
+    else{
+        return sort[0]
+    }
+}
+
+console.log(func([ 1, 1, 1, 2, 1, 1 ]));
