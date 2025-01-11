@@ -22,10 +22,12 @@
 //     const arr = [];
 //     for (let i = 0; i < str; i++) {
 //         const stars = '*'.repeat(2 * i + 1);
+//         const end = '*'.repeat(2 * i + 1);
+
 //         const spaces = ' '.repeat(str - i - 1);
-//         arr.push(spaces + stars + spaces);
+//         arr.push(spaces + stars + spaces );
 //     }
-//     return tower.join('\n');
+//     return arr.join('\n');
 // };
 
 // console.log(func(5));
@@ -400,14 +402,145 @@
 
 
 
-let func = (arr) =>{
-    let sort = arr.sort((a,b)=>a-b) 
-    if(sort[0] === sort[1]){
-        return sort.slice(-1)[0]
-    }
-    else{
-        return sort[0]
-    }
-}
+// let func = (arr) =>{
+//     let sort = arr.sort((a,b)=>a-b) 
+//     if(sort[0] === sort[1]){
+//         return sort.slice(-1)[0]
+//     }
+//     else{
+//         return sort[0]
+//     }
+// }
 
-console.log(func([ 1, 1, 1, 2, 1, 1 ]));
+// console.log(func([ 1, 1, 1, 2, 1, 1 ]));
+
+
+
+
+// function combineStrings(...args) {
+//     if (args.length === 0) {
+//         return "";
+//     }
+//     if (args.length === 1) {
+//         return args[0];
+//     }
+
+//     const maxLength = Math.max(...args.map(str => str.length));
+
+//     let result = "";
+//     for (let i = 0; i < maxLength; i++) {
+//         for (let str of args) {
+//             if (i < str.length) {
+//                 result += str[i];
+//             }
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(combineStrings('abc', '123')); 
+// console.log(combineStrings('abcd', '123')); 
+// console.log(combineStrings('abc', '123', '£$%')); 
+// console.log(combineStrings('abc')); 
+// console.log(combineStrings()); 
+
+
+
+// async function action() {
+//     return new Promise(resolve => setTimeout(resolve, 1000)); // Задержка в 1 секунду
+// }
+
+
+
+
+// function encryptToMorse(sentence) {
+//     return sentence
+//         .toUpperCase() // Convert to uppercase as Morse code is case-insensitive
+//         .split(' ') // Split sentence into words
+//         .map(word => word
+//             .split('') // Split each word into characters
+//             .map(char => CHAR_TO_MORSE[char] || '') // Convert each character to Morse code
+//             .join(' ') // Join Morse code for characters with single space
+//         )
+//         .join('   '); // Join words with triple space
+// }
+
+// // Example usage:
+// const CHAR_TO_MORSE = {
+//     'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',
+//     'E': '.',     'F': '..-.',  'G': '--.',   'H': '....',
+//     'I': '..',    'J': '.---',  'K': '-.-',   'L': '.-..',
+//     'M': '--',    'N': '-.',    'O': '---',   'P': '.--.',
+//     'Q': '--.-',  'R': '.-.',   'S': '...',   'T': '-',
+//     'U': '..-',   'V': '...-',  'W': '.--',   'X': '-..-',
+//     'Y': '-.--',  'Z': '--..',
+//     '1': '.----', '2': '..---', '3': '...--', '4': '....-', 
+//     '5': '.....', '6': '-....', '7': '--...', '8': '---..',
+//     '9': '----.', '0': '-----',
+//     ' ': '',      '.': '.-.-.-', ',': '--..--', '?': '..--..',
+//     "'": '.----.', '!': '-.-.--', '/': '-..-.', '(': '-.--.', 
+//     ')': '-.--.-', '&': '.-...', ':': '---...', ';': '-.-.-.', 
+//     '=': '-...-',  '+': '.-.-.', '-': '-....-', '_': '..--.-', 
+//     '"': '.-..-.', '$': '...-..-', '@': '.--.-.'
+// };
+
+// console.log(encryptToMorse("HELLO WORLD")); 
+// // Output: ".... . .-.. .-.. ---   .-- --- .-. .-.. -.."
+
+
+
+
+
+// let word = {
+//     'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 
+//     'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12, 'm': 13, 
+//     'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 
+//     't': 20, 'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25, 'z': 26
+// };
+
+// let func = (str) => {
+//     let words = str.toLowerCase().split(' '); 
+//     let scores = words.map(el => {
+//         return el.split('').reduce((acc, char) => acc + word[char], 0);
+//     });
+
+//     let maxScore = Math.max(...scores);
+
+//     let maxWords = words.filter((_, idx) => scores[idx] === maxScore);
+
+//     return maxWords[0]; 
+// };
+
+// console.log(func('aaa b')); 
+
+
+
+
+// let func = (arr ,n) => {
+//     let arr1 = []
+//      arr.filter((el,idx)=>{
+//         if (el + el !== n) {
+//             arr1.push(idx); // Возвращаем индекс, если условие выполняется
+//         }
+//     })
+//     return arr1
+// }
+
+// console.log(func([3, 2, 4], 6));
+
+
+let func = (arr, n) => {
+    let indices = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === n) {
+                indices.push(i, j);
+                return indices; 
+            }
+        }
+    }
+    return indices; 
+};
+
+console.log(func([3, 2, 4], 6)); 
