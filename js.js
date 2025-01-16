@@ -398,7 +398,7 @@
 //     return r
 // }
 
-// console.log(func('asaa'));
+// console.log(func('This website is for losers LOL!'));
 
 
 
@@ -485,8 +485,8 @@
 //     '"': '.-..-.', '$': '...-..-', '@': '.--.-.'
 // };
 
-// console.log(encryptToMorse("HELLO WORLD")); 
-// // Output: ".... . .-.. .-.. ---   .-- --- .-. .-.. -.."
+// console.log(encryptToMorse("sos")); 
+// Output: ".... . .-.. .-.. ---   .-- --- .-. .-.. -.."
 
 
 
@@ -530,17 +530,165 @@
 // console.log(func([3, 2, 4], 6));
 
 
-let func = (arr, n) => {
-    let indices = [];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            if (arr[i] + arr[j] === n) {
-                indices.push(i, j);
-                return indices; 
-            }
-        }
-    }
-    return indices; 
-};
+// let func = (arr, n) => {
+//     let indices = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = i + 1; j < arr.length; j++) {
+//             if (arr[i] + arr[j] === n) {
+//                 indices.push(i, j);
+//                 return indices; 
+//             }
+//         }
+//     }
+//     return indices; 
+// };
 
-console.log(func([3, 2, 4], 6)); 
+// console.log(func([3, 2, 4], 6)); 
+
+
+
+
+
+// let func = (s) =>{
+//     let r = ''
+//     for(let i = 0;i < s.length;i++){
+//       if('T'.includes(s[i])){
+//         r+='U'
+//       }else{
+//         r+=s[i]
+//       }
+      
+//     }
+//     return r
+// }
+
+// console.log(func('GCAT'));
+
+
+
+// let func = (...years) => {
+//     let a = years.map((el)=>{
+//         return el * el
+//     }).reduce((acc,el)=>{
+//         return acc + el
+//     },0)
+//     return Math.floor(Math.sqrt(a) / 2)
+// }
+
+// console.log(func(65,60,75,55,60,63,64,45));
+
+
+
+
+// let func = (arr) => {
+//     if(arr.length === 1){
+//         arr.push(0)
+//         return arr
+//     }else{
+//         let arr1 = [];
+//     let arr2 = [];
+//     let res = []
+//     let sum1 = 0;
+//     let sum2 = 0;
+
+//     arr.map((el,idx)=>{
+//         if(idx % 2 === 0){
+//             arr1.push(el)
+//         }else {
+//             arr2.push(el)
+//         }
+//     })
+//     for(let i = 0;i<arr1.length;i++){
+//         sum1 += arr1[i]
+//     }
+//     for(let i = 0;i<arr2.length;i++){
+//         sum2 +=arr2[i]
+//     }
+//     res.push(sum1)
+//     res.push(sum2)
+//     return res
+//     }
+    
+// }
+
+// console.log(func([13,27,427,427,4]));
+
+
+
+// let func = (arr) => {
+//     if(arr.length === 1){
+//         arr.push(arr[0])
+//         return arr
+//     } 
+//     let a = arr.sort((a,b)=>a-b).slice(-1)[0]
+//     let b = arr.sort((a,b)=>a-b)[0]
+//     return [b,a]
+// }
+
+// console.log(func([2334454,5,1,2,3,4]));
+
+
+
+
+
+
+// let func = (arr, asc) => {
+//     if(asc === true){
+//         return arr.sort((a,b)=>a+b)    
+//     }else{
+//         return arr.sort((a,b)=>a+b)    
+
+//     }
+// }
+
+// console.log(func([1, 2, 3, 4, [-5,-4]], false));
+
+
+
+
+
+// let func = (url) => {
+//     url = url.replace("https://", "").replace("http://", "").replace("www.", "");
+//     return url.split('.')[0];
+// }
+
+// console.log(func('http://github.com/carbonfive/raygun'));
+
+
+
+
+// let func = (arr1, arr2) => {
+//     let r = []
+//     for(let i = 0;i<arr1.length;i++){
+//       r.push(arr1[i])
+//     }
+    
+//     for(let i = 0;i<arr2.length;i++){
+//       r.push(arr2[i])
+//     }
+//     let res = [...new Set(r)]
+//     return res.sort((a,b)=>a-b)
+//   }
+
+//   console.log(func([1,2,3,4], [5,6,7,8]));
+
+
+
+
+
+
+// let func = (array) => {
+//     return array.map((el)=>{
+//         if(el < 0){
+//           return el*2 + el 
+//         }
+//         else if (el => 0){
+//           return el*2 - el 
+//         }
+//     })
+      
+// }
+
+// console.log([1, 2, 3, 4, 5]);
+
+
