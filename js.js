@@ -692,3 +692,269 @@
 // console.log([1, 2, 3, 4, 5]);
 
 
+
+
+
+
+
+// let func = (str) => {
+//     let res = ''
+//     let word = 'qwertyuiopasdfghjklmnbvcxz'
+//     for(let i = 0;i<str.length;i++){
+//         if(word.includes(str[i])){
+//             res+=str[i]
+//         }
+//     }
+//     return res
+// }
+
+// console.log(func('a;!kdmf2w30'));
+
+
+
+
+// let func = (str) => {
+//     return str.split(' ').reverse().join(' ')
+// }
+
+// console.log(func('Ruslan Anarbekov'));
+
+
+
+
+
+// let func = (arr) => {
+//     return arr.slice(-1)[0]
+// }
+
+// console.log(func([1,2,3,4,5,6,7,8,123,4,5]));
+
+
+
+// function factorial(n) {
+//     if (!Number.isInteger(n)) {
+//       throw new RangeError("Input must be an integer");
+//     }
+//     if (n < 0) {
+//       throw new RangeError("Input must be a non-negative integer");
+//     }
+//     return n > 1 ? n * factorial(n - 1) : 1;
+//   }
+
+
+
+
+
+// const factorial = n => n ? factorial(n - 1) * n : 1;
+
+
+
+
+// function canFormOriginal(derived) {
+//     const n = derived.length;
+
+//     // Функция для проверки с заданным начальным значением original[0]
+//     function checkStart(start) {
+//         const original = Array(n).fill(0); // Создаем массив original длины n
+//         original[0] = start;
+
+//         // Построим весь массив original
+//         for (let i = 1; i < n; i++) {
+//             original[i] = derived[i - 1] ^ original[i - 1]; // derived[i-1] = original[i-1] ⊕ original[i]
+//         }
+
+//         // Проверим замкнутость цикла
+//         return (original[n - 1] ^ original[0]) === derived[n - 1];
+//     }
+
+//     // Проверяем два варианта: original[0] = 0 и original[0] = 1
+//     return checkStart(0) || checkStart(1);
+// }
+
+// // Примеры
+// console.log(canFormOriginal([1, 1, 0])); // true
+// console.log(canFormOriginal([1, 0]));    // false
+// console.log(canFormOriginal([1, 1]));    // true
+
+
+
+
+
+// let func = (x) => {
+//     let num = String(x).split('').reverse().join('')
+//     return Number(num) == x
+// } 
+
+// console.log(func(12));
+
+
+
+
+// let func = (head) => {
+//     if(head.length > 10**5){
+//         return false
+//     }
+
+//     let reverseHead = [...head].reverse();
+//     return String(head) === String(reverseHead); 
+// }
+
+// console.log(func([1,2,2,1]));
+
+
+
+
+
+// let func = (s) => {
+//     const RIM = {
+//     'I': '1',    'X': '10',  'C': '100',  'M': '1000',
+//     'V': '5',     'L': '50',  'D': '500',  
+// };
+
+
+
+// return s.split('').map((el)=>{
+//     return Number(RIM[el]) || ''
+// })
+
+
+    
+// };
+
+// console.log(func('MCMXCIV'));
+
+
+
+
+
+// var romanToInt = function(s) {
+//     const RIM = {
+//     'I': '1',    'X': '10',  'C': '100',  'M': '1000',
+//     'V': '5',     'L': '50',  'D': '500',  
+// };
+
+// let arr = s.split('').map((el)=>{
+//     return Number(RIM[el]) || ''
+// })
+
+// let total = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i < arr.length - 1 && arr[i] < arr[i + 1]) {
+//             total += arr[i + 1] - arr[i];
+//             i++; // Skip the next number as it's already processed
+//         } else {
+//             total += arr[i];
+//         }
+//     }
+
+//     return total;
+// };
+
+
+
+
+// let func = (str , n) => {
+//     return str.slice(0,n)
+// }
+
+// console.log(func('hello wrefoh',2 ));
+// console.log(func([1,2,3,4,5],3 ));
+
+
+
+
+// let func = (arr) => {
+//     return arr.map((el,idx)=>{
+        // if(el % 2 === 0){
+        //     return el = 'жуп'
+        // }else{
+        //     return el = 'так'
+        // }
+//     })
+// }
+
+// console.log(func([1,2,3]));
+
+
+
+
+
+
+// let func = (arr) => {
+//     let result = []
+//     for(let i = 0;i<arr.length;i++){
+//         if(arr[i] % 2 === 0){
+//             result += arr[i] = 'жуп '
+//         }else{
+//             result +=  arr[i] = 'так '
+//         }
+//     }
+//     return result
+// }
+
+// console.log(func([1,2,3,4,5]));
+
+
+
+
+
+// let func = (str) => {
+//     return str.split(',').filter((el)=>{
+//         if(el === 'Aziret'){
+//             return el = ''
+//         }
+//         else{
+//             return el
+//         }
+//     })
+// }
+
+// console.log(func('Ruslan,Islam,Aziret'));
+
+
+
+
+// let func = (arr) => {
+//     let r = arr.sort((a,b)=>a+b)[0]
+//     let r1 = arr.sort((a,b)=>b-a)[0]
+//     if(arr[0] < arr[1]){
+//         return arr.filter((el)=>{
+//             if(el === r){
+//                 return !el
+//             } 
+//             return el
+//         })
+//     }
+//     else {
+//         return arr.filter((el)=>{
+//             if(el === r1){
+//                 return !el
+//             } 
+//             return el
+//         })
+//     }
+    
+// }
+
+// console.log(func([1, 2, 3, 4, 5]));
+
+
+
+
+// let func = (arr) => {
+//     return arr.filter((el,idx)=>{
+//         if(el % idx === 0 ){
+//             return el
+//         }
+//         else{
+//             return !el
+//         }
+//     })
+// }
+
+// console.log(func([-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68]));
+
+
+
+
+
