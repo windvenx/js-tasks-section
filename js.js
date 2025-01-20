@@ -958,3 +958,184 @@
 
 
 
+// let func = (arr) => {
+//     const smileRegex = /^[:;][-~]?[)D]$/; // Регулярное выражение для проверки смайликов
+//     return arr.reduce((acc, el) => smileRegex.test(el) ? acc + 1 : acc, 0);
+// }
+
+// console.log(func([';]', ':]', ';)', ':$', 'D'] ));
+
+
+// let func = (arr) => {
+//     let  smileys = [":)",";)",":-)",";-)",";~)",":~)",":D",";D",":-D",":~D",";-D",";~D"];
+//     let count = 0;
+
+//     for (var i=0; i<arr.length; i++){
+//     for (var j=0; j<smileys.length; j++){
+//         if (arr[i]===smileys[j]){
+//         count++;
+//         }
+//     }
+//     }
+//     return count;
+// }
+
+// console.log(func([';]', ':]', ';)', ':$', 'D'] ));
+
+
+
+
+// let func = (str) => {
+//     let en = 'english';
+//     if(str.toLowerCase().includes(en)){
+//         return true
+//     }else{
+//         return false
+//     }
+
+//     or
+
+
+//     // return /english/i.test(s)
+// }
+
+// console.log(func('abcEnglishdef'));
+
+
+
+
+// let func = (str) => {
+//     return str
+//         .split(' ')
+//         .map(word => word[0].toUpperCase() + word.slice(1))
+//         .join(' ');
+// };
+
+// console.log(func("How can mirrors be real if our eyes aren't real"));
+
+
+
+
+
+// let func = (str) => {
+//     let words = str.split(' '); // Разделяем строку на массив слов
+//     for (let i = 0; i < words.length; i++) { // Проходим по каждому слову
+//         // Преобразуем первую букву в заглавную, а остальную часть оставляем без изменений
+//         words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+//     }
+//     return words.join(' '); // Склеиваем слова обратно в строку
+// };
+
+// console.log(func("How can mirrors be real if our eyes aren't real"));
+
+
+
+// String.prototype.toJadenCase = function () {
+//     return this
+//         .split(' ')
+//         .map(word => word[0].toUpperCase() + word.slice(1))
+//         .join(' ');
+// };
+
+// // Пример использования:
+// const str = "How can mirrors be real if our eyes aren't real";
+// console.log(str.toJadenCase()); 
+
+
+
+
+// let func = (strs) => {
+//     let acc = 0
+//      strs.map((el)=>{
+//         if(el.slice(0,2) === 'fl'){
+//             acc++
+
+//         }
+       
+        
+//         // console.log(el.slice(0,3) );
+        
+//     },0)
+//     if(acc === 3){
+//         return 'fl'
+//     }else{
+//         return ''
+//     }
+// }
+
+// console.log(func(['flyoih','fower','flsamf']));
+
+
+
+
+// let func = (arr1,arr2) => {
+//     let r = [...arr1,...arr2]
+//     return r.sort((a,b)=>a-b)
+// }
+
+// console.log(func([1,2,4],[1,3,4]));
+
+
+
+
+
+// let func = (a,b) =>{
+//     for (let i = 0; i < b.length; i++) {
+//         return a.filter((el)=>{
+//             if (el === b[i]) {
+//                 return el = ''
+//             }else{
+//                 return el
+//             }
+//         })
+//     }
+    
+// }
+
+// console.log(func([1,2,3], [1,2]));
+
+
+
+
+
+// let func = (a,b) => {
+//     return a.filter(el => !b.includes(el));
+// }
+// console.log(func([1,2,3],[1,2]));
+
+
+
+// let groupElements = (arr) => {
+//     return arr.reduce((acc, val) => {
+//         if (!acc[val]) { 
+//             acc[val] = [];
+//         }
+//         acc[val].push(val); 
+//         return acc;
+//     }, []);
+
+    
+// }
+
+// console.log(groupElements([1,2,3,4,1,1,2])); 
+
+
+
+
+
+// let func = (arr,n) => {
+//     const itemCounts = new Map(); // Словарь для подсчёта встречаемости элементов
+//     const result = []; // Результатирующий массив
+
+//     for (const item of arr) {
+//         const count = itemCounts.get(item) || 0; // Получаем текущее количество или 0, если элемент встретился впервые
+//         if (count < n) { // Если количество встреч меньше заданного n
+//             result.push(item); // Добавляем элемент в результат
+//             itemCounts.set(item, count + 1); // Увеличиваем счётчик для этого элемента
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(func([1,1,1,2,3,2,3,3,3],2));
