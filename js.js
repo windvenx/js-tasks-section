@@ -1092,7 +1092,7 @@
     
 // }
 
-// console.log(func([1,2,3], [1,2]));
+// console.log(func([1,2,3], [1,2,3]));
 
 
 
@@ -1139,3 +1139,234 @@
 // }
 
 // console.log(func([1,1,1,2,3,2,3,3,3],2));
+
+
+
+
+
+
+// let func = (arr) => {
+//     return arr.reduce((acc,el)=>{
+//         return acc + el[0] - el[1]
+//     },0)
+// }
+
+// console.log(func([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]));
+
+
+
+// let func = (cap, on, wait) => {
+//     let total = on + wait;
+//     if (total <= cap) {
+//       return 0; 
+//     } else {
+//       return total - cap; 
+//     }
+// }
+
+// console.log(func(50, 6, 14));
+
+
+
+
+// let func = (str) => {
+//     let upper = 0
+//     let lower = 0
+//     return str.split('').map((el)=>{
+//       if(el === el.toUpperCase()){
+//         upper++
+//       }  else{
+//         lower++
+//       }
+//       if(upper.slice(-1)[0] > lower.slice(-1)[0]){
+//         return el.toUpperCase()
+//       }else if(upper.slice(-1)[0] < lower.slice(-1)[0]){
+//         return el.toLowerCase()
+//       }
+//     })
+    
+// }
+
+// console.log(func('CoDe'));
+
+
+
+// let func = (arr) => {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== arr[i + 1]) {
+//       result.push(arr[i]); 
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(func([1,2,2,3,3]));
+
+// or
+
+// let func = (arr) => {
+//   return arr.filter((item, index) => item !== arr[index + 1]);
+// };
+
+// console.log(func([1, 2, 2, 3, 3])); // [1, 2, 3]
+
+
+
+
+// let func = (n1,n2) => {
+//     return (n1 + n2).toString(2)
+// }
+
+// console.log(func(5,9));
+
+
+
+
+
+// let func = (str) => {
+//     if(str.length == 1){
+//         return String(str[0].charCodeAt(0))
+//     }
+//     let str1 = str[0].charCodeAt(0)
+//     let last = str.slice(-1)
+//     return [str1,str.slice(1,-1),last[0]].join('')
+// }
+// console.log(func('A'));
+
+
+
+
+// let func = (str) => {
+//     if (!str.length) return ''; // Возвращает пустую строку, если входная строка пуста
+  
+//     if (str.length === 1) {
+//       return str.charCodeAt(0).toString(); // Возвращает ASCII код первого символа, если строка состоит из одного символа
+//     }
+  
+//     // Получаем ASCII код первого символа
+//     let asciiFirstChar = str.charCodeAt(0);
+  
+//     // Обрабатываем случай, когда в строке больше одного символа
+//     let middle = str.slice(2, -1); // Срезаем все символы кроме первого и последнего
+//     let secondChar = str[1]; // Второй символ
+//     let lastChar = str.slice(-1); // Последний символ
+  
+//     // Собираем зашифрованную строку
+//     if (str.length === 2) {
+//       return `${asciiFirstChar}${lastChar}`; // Если в строке только два символа, просто добавляем ASCII первого и последний символ
+//     }
+  
+//     return `${asciiFirstChar}${lastChar}${middle}${secondChar}`; // Полное шифрование для строк длиннее двух символов
+//   }
+  
+//   // Примеры использования
+//   console.log(encryptThis("A")); // "65"
+//   console.log(encryptThis("AB")); // "65B"
+//   console.log(encryptThis("Hello")); // "72olle"
+  
+
+
+// var encryptThis = function(text) {
+//     return text.split(' ').map(word => {
+//       if (!word) return '';  // Проверка на пустое слово
+  
+//       let asciiFirstChar = word.charCodeAt(0).toString(); // ASCII код первого символа
+//       if (word.length === 1) {
+//         return asciiFirstChar;  // Возвращаем только ASCII код, если слово из одного символа
+//       }
+  
+//       // Для слов длиной 2 и более
+//       let secondChar = word.length > 1 ? word[1] : '';  // Второй символ
+//       let lastChar = word.length > 1 ? word[word.length - 1] : '';  // Последний символ
+//       let middle = word.slice(2, -1);  // Средняя часть слова
+  
+//       if (word.length === 2) {
+//         return `${asciiFirstChar}${lastChar}`;  // Если слово из двух символов
+//       }
+  
+//       return `${asciiFirstChar}${lastChar}${middle}${secondChar}`;  // Полное шифрование для слов длиннее двух символов
+//     }).join(' ');  // Объединяем обработанные слова обратно в строку с пробелами
+//   }
+  
+//   // Тестирование функции
+//   console.log(encryptThis("A wise old owl lived in an oak"));  // Ожидаемый результат согласно вашему запросу
+  
+
+
+
+// let func = (number) => {
+//     let result = ''; 
+//     for (let i = 1; i <= 10; i++) {
+//       result += `${i} * ${number} = ${i * number}\n`; 
+//     }
+//     return result.trim(); 
+//   }
+  
+//   console.log(multiTable(5)); 
+  
+
+
+
+// let func = (num) => {
+//     let r = ''
+//     for(let i = 1;i<11;i++){
+//         r+=`${i} * ${num} = ${i * num}\n`
+//     }
+//     return r
+// }
+
+// console.log(func(8));
+
+
+
+// let func = (str) => {
+//     let en = 'english'
+//     if(str.toLowerCase().includes(en)){
+//         return true
+//     }else{
+//         return false
+//     }
+
+//     // return /english/i.test(str)
+// }
+
+// console.log(func('alkfEnglishdf'));
+
+
+
+
+// let func = (a,b) => {
+//     return a.filter((x)=>{
+//         return !b.includes(x)
+//     })
+// }
+
+// console.log(func([1,2,3,4,3,3],[1,3]));
+
+
+
+// let func = (arr) => {
+//     let a = arr.slice(0,3)
+//     let b = arr.slice(3,6)
+//     let c = arr.slice(6,10)
+    // return `(${a}) ${b}-${c}`.replace(/,/gi,'')
+// }
+
+// console.log(func([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+
+
+let func = (recipe,a) => {
+    let r = []
+    for (const key in recipe) {
+        r.push(key)
+    }
+    for (let value of Object.values(recipe)) {
+        r.push(value)
+
+      }
+    return r
+}
+
+console.log(func({flour: 500, sugar: 200, eggs: 1},{flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
