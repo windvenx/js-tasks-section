@@ -1261,9 +1261,9 @@
 //   }
   
 //   // Примеры использования
-//   console.log(encryptThis("A")); // "65"
-//   console.log(encryptThis("AB")); // "65B"
-//   console.log(encryptThis("Hello")); // "72olle"
+//   console.log(func("A")); // "65"
+//   console.log(func("AB")); // "65B"
+//   console.log(func("Hello")); // "72olle"
   
 
 
@@ -1357,16 +1357,315 @@
 
 
 
-let func = (recipe,a) => {
-    let r = []
-    for (const key in recipe) {
-        r.push(key)
-    }
-    for (let value of Object.values(recipe)) {
-        r.push(value)
+// let func = (recipe,a) => {
+//     let r = []
+//     for (const key in recipe) {
+//         r.push(key)
+//     }
+//     for (let value of Object.values(recipe)) {
+//         r.push(value)
 
-      }
-    return r
-}
+//       }
+//     return r
+// }
 
-console.log(func({flour: 500, sugar: 200, eggs: 1},{flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
+// console.log(func({flour: 500, sugar: 200, eggs: 1},{flour: 1200, sugar: 1200, eggs: 5, milk: 200}));
+
+
+
+
+// let func = (num) => {
+//     let arr = []
+//     for(let i = 1;i < num * num + 1;i++){
+//         arr+=i
+//     }
+//     let r = []
+//     for(let i = 0;i < arr.length;i++){
+//         if(i % num === 0){
+//             r.push([])
+//         }
+//         r[r.length - 1].push(arr[i])
+        
+//     }
+//     return r.map((el)=> el.map(el=>Number(el)))
+//     // return [r.split('').reduce((acc, el, i) => {
+//     //     if(i % num === 0) {
+//     //       acc.push([]);
+//     //     }
+//     //     acc[acc.length - 1].push(el);
+//     //     return acc;
+//     //   }, [])]
+// }
+
+// console.log(func(7));
+
+
+
+
+
+// let func = (num) => {
+//     let result = []; 
+//   for (let i = 1; i <= num; i++) {
+//     let row = []; 
+//     for (let j = 1; j <= num; j++) {
+//       row.push(i * j); 
+//     }
+//     result.push(row); 
+//   }
+
+//   return result;
+// }
+
+// console.log(func(4));
+
+
+
+
+
+
+// let func = (num) => {
+//     let result = []; 
+//   for (let i = 1; i <= num; i++) {
+//     let row = []; 
+//     for(let j = 1;j <=num;j++){
+//         row.push(i*j)
+//     }
+//   result.push(row)
+//   }
+//   return result;
+// }
+
+// console.log(func(4));
+
+
+
+
+
+// let func = (arr) => {
+//     let r = []
+//     let n = [...new Set(arr)].sort((a,b)=>a-b)
+//     for(let i = 0;i < n.length;i++){
+//         if(n[i] + 1 === n[i + 1]){
+//             r.push(n[i],n[i+1])
+             
+//         }
+//     }
+//     return [...new Set(r)]
+// }
+
+// console.log(func([3, 1, 100, 120, 101, 99, 2]));
+
+
+
+
+// let func = (num) => {
+//     while(String(num).slice(-1) === '0'){
+//         num = Number(String(num).slice(0,-1))
+//     }
+//     return num
+// }
+
+// console.log(func(120300));
+
+
+
+
+// let func = (str) => {
+//     if (!str.length) return ''; // Возвращает пустую строку, если входная строка пуста
+  
+//     if (str.length === 1) {
+//       return str 
+//     }
+//     return str.split(' ').map((el)=>{
+//         let start = el.slice(1, -1); // Срезаем все символы кроме первого и последнего
+//         let middle = el[0]; 
+//         let end = el.slice(-1)
+      
+        
+      
+//         return `${start}${end}${middle}ay`; 
+//     }).join()
+//   }
+  
+//   // Примеры использования
+//   console.log(func("Pig latin is cool")); // 'igPay atinlay siay oolcay'
+//   console.log(func("AB")); // "65B"
+//   console.log(func("Hello")); // "72olle"
+
+
+
+
+
+// let func = (num) => {
+//     return num < Number.MAX_SAFE_INTEGER 
+// }
+
+// console.log(func(9007199254740992));
+
+
+
+// let func = (list1,list2) => {
+//     let r = [...list1,...list2]
+//     return r.sort((a,b)=>a-b)
+// }
+
+// console.log(func([1,2,4], [1,3,4]));
+
+
+
+
+// let func = (list1,list2) => {
+//     let r = [...list1,...list2]
+//     for(let j = r.length - 1;j > 0;j--){
+//         for(let i = 0;i < j;i++){
+//             if(r[i] > r[i + 1]){
+//                 let temp = r[i];
+//                 r[i] = r[i + 1]
+//                 r[i + 1] = temp
+//             }
+//         }
+//     }return r
+// }
+
+// console.log(func([1,2,4], [1,3,4]));
+
+
+
+
+// let func = (arr) => {
+//     return [...new Set(arr)]
+// }
+
+// console.log(func([0,0,1,1,1,2,2,3,3,4]));
+
+
+
+
+// let func = (arr) => {
+//     return [...new Set(arr)]
+// }
+
+// console.log(func('texttxeta'));
+
+
+
+// let func = (arr) => {
+//     return arr.reduce((acc,el)=>{
+//         return acc + el
+//       },0)
+// }
+
+// console.log(func([1,2,2]));
+
+
+
+
+
+// let min = (arr) => {
+//     // return arr.sort((a, b) => a - b)[0]
+//     return Math.max(...arr)
+// }
+
+// let max = (arr) => {
+//     // return arr.sort((a, b) => b - a)[0]
+//     return Math.min(...arr)
+
+// }
+
+// console.log(max([78,12,34]));
+// console.log(min([78,12,34]));
+
+
+
+
+// let func = (str) => {
+//     let word = str.split(' ')
+//     let obg = {}
+//     for(let i = 0;i < word.length;i++){
+//         let j = word[i]
+//         obg[j]= 0
+//     }
+//     return obg
+// }
+
+// console.log(func("e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e"));
+
+
+
+
+// let func = (str) => {
+//     let word = str.toLowerCase().split(' ')
+//     const countItems = {};
+//     for (const item of word) {
+//         countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+//     }
+//     const result = Object.keys(countItems).sort((a,b)=>a.length - b.length)
+//     return result.slice(0,3)
+// }
+
+// console.log(func("In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income."));
+
+
+
+
+// function topThreeWords(text) {
+//     const res = [];
+//     const words = text.match(/[a-zA-Z']+/g) || [];
+//     words.forEach(word => {
+//         if (/[a-zA-Z]/.test(word)) {
+//         }
+//     });
+//     const wordCounts = res.reduce((counts, word) => {
+//         counts[word] = (counts[word] || 0) + 1;
+//         return counts;
+//     }, {});
+//     const topThree = Object.entries(wordCounts)
+//         .sort((a, b) => b[1] - a[1])
+//         .slice(0, 3)
+//         .map(entry => entry[0]);
+//     return topThree;
+// }
+
+
+
+
+
+// let word = 'e e e e DDD ddd DdD: ddd ddd aa aA Aa, bb cc cC e e e'
+// const countItems = {}; // здесь будет храниться промежуточный результат
+
+// // получаем объект в котором ключ - это элемент массива, а значение - сколько раз встречается элемент в списке
+// // например так будет выглядеть этот объект после цикла:
+// // {1: 1, 3: 2, 4: 2, 7: 1, 15: 1, 19: 2}
+// // 1 встречается в тексте 1 раз, 3 встречается 2 раза, 4 встречается 2 раза и так далее
+// for (const item of word) {
+//   // если элемент уже был, то прибавляем 1, если нет - устанавливаем 1
+//   countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+  
+// }
+
+// // обрабатываем ключи объекта, отфильтровываем все, что меньше 1
+// const result = Object.keys(countItems).filter((item) => countItems[item] > 1).slice(0,3)
+// console.dir(result); // => ['3', '4', '19']
+
+
+
+
+
+
+
+// const colors = ['blue', 'red'];
+// let rules = {};
+// for (let i = 0; i < colors.length; ++i) {
+//   let color = colors[i];
+//   rules[color] = [];
+//   for (let j = 0; j < document.styleSheets.length; ++j) {
+//     let styleSheet = document.styleSheets[j];
+//     for (let k = 0; k < styleSheet.cssRules.length; ++k) {
+//       let rule = styleSheet.cssRules[k];
+//       if (rule.style && color == rule.style.color) {
+//         rules[color].push(rule.selectorText);
+//       }
+//     }
+//   }
+// }
+// console.log(rules)
