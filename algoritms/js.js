@@ -58,6 +58,7 @@
 //   console.log(func([112,3,44,4,4,4,4,5,5],4));
 // ==============
 // Линейный поиск  
+// Выполняется за Линейное время ,по скорости O(n)
 
 // Выполненная задача:Нужно найти и вывести индекс элемента,если их много то в массиве 
 
@@ -65,16 +66,89 @@
 
 
 
-let func = (array) => {
-    const seen = {};
-  const unique = [];
-  for (const element of array) {
-    if (!seen[element]) {
-      unique.push(element);
-      seen[element] = true;
-    }
-  }
-  return unique;
-}
+// let func = (array) => {
+//     const seen = {};
+//   const unique = [];
+//   for (const element of array) {
+//     if (!seen[element]) {
+//       unique.push(element);
+//       seen[element] = true;
+//     }
+//   }
+//   return unique;
+// }
 
-console.log(func([1,2,1,3,4,2]));
+// console.log(func([1,2,1,3,4,2]));
+// ===================
+// Удаление дубликатов
+
+
+
+
+
+
+// let func = (arr,num) => {
+//   let low = 0;
+//   let high = arr.length - 1;
+//   while(low <= high){
+//     let mid = Math.floor((low + high) / 2);
+//     let guess = arr[mid];
+//     if(guess == num){
+//       return mid
+//     }
+//     if(guess > num){
+//       high = mid - 1
+//     }else{
+//       low = mid + 1
+//     }
+//   }
+  
+// }
+
+// console.log(func([1,3,4,5,7],4));
+// ================================================================
+// Бинарный поиск(Этот вариант намного быстрее линейнего поиска)
+// Выполняется за Логарифмическое время ,по скорости O(Log n)
+
+// Выполненная задача:Нужно найти и вывести индекс элемента
+
+
+
+
+
+// function factorial(n) {
+//     let result = 1;
+//     for (let i = 2; i <= n; i++) {
+//         result *= i;
+//     }
+//     return result;
+// }
+
+// function middlePermutation(s) {
+//     let sorted = s.split('').sort();
+//     let result = '';
+//     let midIndex = Math.floor(factorial(sorted.length) / 2) - 1;
+
+//     while (sorted.length > 0) {
+//         let n = sorted.length;
+//         let fact = factorial(n - 1);
+//         let index = Math.floor(midIndex / fact);
+//         result += sorted[index];
+//         sorted.splice(index, 1);
+//         midIndex -= index * fact;
+//     }
+
+//     return result;
+// }
+
+// function middlePermutation(string) {
+//     let s = string.split('')
+//     if (s.length % 2 === 0) {
+//         return s.splice(s.length / 2 - 1, 1) + s.reverse().join('');
+//     } else {
+//         return s.splice(Math.floor(s.length / 2), 1) + middlePermutation(s.join(''));
+//     }
+// }
+
+// console.log(middlePermutation('ypofc')); 
+// console.log(middlePermutation('gvsdnufklripjqc'));

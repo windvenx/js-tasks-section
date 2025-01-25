@@ -1594,13 +1594,16 @@
 
 
 // let func = (str) => {
-//     let word = str.toLowerCase().split(' ')
+//     let words = str.toLowerCase().match(/\b[\w']+\b/g);
 //     const countItems = {};
-//     for (const item of word) {
-//         countItems[item] = countItems[item] ? countItems[item] + 1 : 1;
+//     if (!words) {
+//         return [];
 //     }
-//     const result = Object.keys(countItems).sort((a,b)=>a.length - b.length)
-//     return result.slice(0,3)
+//     for (const word of words) {
+//         countItems[word] = countItems[word] ? countItems[word] + 1 : 1;
+//     }
+//     const sortedWords = Object.keys(countItems).sort((a, b) => countItems[b] - countItems[a]);
+//     return sortedWords.slice(0, 3);
 // }
 
 // console.log(func("In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income."));
@@ -1669,3 +1672,16 @@
 //   }
 // }
 // console.log(rules)
+
+
+
+
+// let func = (str) => {
+//     let i = str.slice(0,-1).split('').filter((el)=>{
+//         return el !== '!'
+//     }).join('')
+    
+//     return str.slice(-1)[0] == '!' ? `${i}` : `${i}!`
+// }
+
+// console.log(func('Hi!'));
