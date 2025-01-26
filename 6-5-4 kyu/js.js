@@ -66,35 +66,35 @@
 
 
 
-let func = (input) => {
-  const str = input.toString(); 
-  const r = [];
+// let func = (input) => {
+//   const str = input.toString(); 
+//   const r = [];
 
-  function permute(str, left, right) {
-      if (left == right) {
-          r.push(str);
-      } else {
-          for (let i = left; i <= right; i++) {
-              str = swap(str, left, i);
-              permute(str, left + 1, right);
-          }
-      }
-  }
+//   function permute(str, left, right) {
+//       if (left == right) {
+//           r.push(str);
+//       } else {
+//           for (let i = left; i <= right; i++) {
+//               str = swap(str, left, i);
+//               permute(str, left + 1, right);
+//           }
+//       }
+//   }
 
-  function swap(a, i, j) {
-      const charArray = a.split("");
-      const temp = charArray[i];
-      charArray[i] = charArray[j];
-      charArray[j] = temp;
-      return charArray.join("");
-  }
+//   function swap(a, i, j) {
+//       const charArray = a.split("");
+//       const temp = charArray[i];
+//       charArray[i] = charArray[j];
+//       charArray[j] = temp;
+//       return charArray.join("");
+//   }
 
-  permute(str, 0, str.length - 1);
-  let sorted = r.sort((a,b)=>a-b).indexOf(String(input))
-  return r[sorted -1]
-}
+//   permute(str, 0, str.length - 1);
+//   let sorted = r.sort((a,b)=>a-b).indexOf(String(input))
+//   return r[sorted + 1]
+// }
 
-console.log(func(2071)); 
+// console.log(func(2017)); 
 
 
 
@@ -128,4 +128,45 @@ console.log(func(2071));
 //     return [...new Set(r)]
 // }
 
-// console.log(func('abcdxg'));
+// console.log(func('abc'));
+
+
+
+
+
+//  let func = (nums,val) => {
+//     let k = 0;
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] !== val) {
+//             nums[k] = nums[i];
+//             k++;
+//         }
+//     }
+//     return k; 
+//  }
+
+//  console.log(func([1,2,3,4,4,4],4));
+ 
+
+
+
+
+// let func = (str) => {
+//     let words = str.toLowerCase().match(/\b[\w']+\b/g);
+//     const countItems = {};
+//     if (!words) {
+//         return [];
+//     }
+//     for (const word of words) {
+//         countItems[word] = countItems[word] ? countItems[word] + 1 : 1;
+//     }
+//     const sortedWords = Object.keys(countItems).sort((a, b) => countItems[b] - countItems[a]);
+//     return sortedWords.slice(0, 3);
+// }
+
+// console.log(func("In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income."));
+
+
+
+
+

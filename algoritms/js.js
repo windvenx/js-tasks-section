@@ -46,16 +46,16 @@
 // let func = (array, target) => {
 //     let r = []
 //     for (let i = 0; i < array.length; i++) {
-//       if (array[i] === target) {
-//         r.push(i); 
+//       if (array[i] !== target) {
+//         r.push(array[i]); 
 //       }
 //     }
 //     if(r.length === 1){
 //         return r[0]
 //     }
-//     return r
+//     return r.length
 //   }
-//   console.log(func([112,3,44,4,4,4,4,5,5],4));
+//   console.log(func([3,2,2,3],3));
 // ==============
 // Линейный поиск  
 // Выполняется за Линейное время ,по скорости O(n)
@@ -152,3 +152,22 @@
 
 // console.log(middlePermutation('ypofc')); 
 // console.log(middlePermutation('gvsdnufklripjqc'));
+
+
+
+
+
+// function factorial(n) {
+//     if (n === 1) {
+//         return n; 
+//     } else {
+//         return n * factorial(n - 1);    
+//     }
+// }
+// console.log(factorial(5));
+
+
+
+// напишите функцию в которую передан аргумент массив,она должна возврашать 
+//  удвоенные элементы
+

@@ -1685,3 +1685,72 @@
 // }
 
 // console.log(func('Hi!'));
+
+
+
+
+
+// let func = (arr) => {
+//     return arr.map((el)=>{
+//         return el * 2
+//     })
+// }
+
+// console.log(func([1,2,3,4,5,6,7,8,9,10]));
+
+
+
+
+let func = (arr) => {
+    return arr.filter((el,idx)=>{
+        if(idx % 2 === 0){
+            return el
+        }
+    })
+}
+
+console.log(func('qwerty')); //'
+
+
+
+
+
+// let func1 = (arr) => {
+//     return arr.filter((el)=>{
+//         if(el !== 1){
+//             return el
+//         }
+//         // return el!== 1
+//     })
+// }   
+
+// console.log(func1([1,1,1,2,2,1,1,1,32,1234,]));
+
+
+
+// let func3 = (arr) => {
+//     if(arr.length === 0)return [];
+//     return arr.map((el)=>{
+//         return el.join()
+//     }).join().split(',').map((el)=>Number(el)).sort((a,b)=>a-b)
+// }
+
+// console.log(func3([]));
+
+
+
+
+// let func = (d) => {
+//     if(d >= 3){
+//         return (40 * d) - 20
+//       }else if(d >=7){
+//         return (40 * d) - 50
+//       }else{
+//         return (40 * d)
+//       }
+// }
+
+// console.log(func(7));
+
+
+
