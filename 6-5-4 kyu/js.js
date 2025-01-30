@@ -170,3 +170,16 @@
 
 
 
+// let func = (arr) => {
+//     let max = 0;
+//     let current = 0;
+//     for(let i = 0;i < arr.length;i++){
+//         current = Math.max(arr[i],current + arr[i])
+//         max = Math.max(max,current)
+//     }
+//     return max
+// }
+
+// console.log(func([-2,1,4,-1,2,1,4]));
+
+
